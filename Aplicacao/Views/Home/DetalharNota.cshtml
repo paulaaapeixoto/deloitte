@@ -1,0 +1,54 @@
+﻿@model Modelo.NotaFiscal
+
+@{
+    ViewBag.Title = "DetalharNota";
+}
+
+<h2>Detalhar Nota</h2>
+
+<div>
+    <h4>Nota Fiscal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.Label("Cliente")
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nome)
+        </dd>
+        <dt>
+            @Html.Label("Produtos")
+        </dt>
+        <dd>
+            @Html.Raw(ViewBag.GridViewString)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+   @Html.ActionLink("Voltar", "Index")
+</p>

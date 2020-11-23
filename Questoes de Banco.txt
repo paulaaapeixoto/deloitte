@@ -1,0 +1,7 @@
+A) insert into Store values ('LOJA A');
+B) update Titles set [type] = 'culinária' where title = 'MC3021';
+C) delete from Sales where stor_id='7066';
+D) SELECT * FROM Store s WHERE s.stor_id NOT IN (SELECT stor_id FROM Sales);
+E) SELECT title FROM Titles t WHERE t.title_id NOT IN (SELECT title_id FROM Sales);  
+F) SELECT title, SUM(qty)as quantidade FROM Titles LEFT JOIN Sales on Titles.title_id = Sales.title_id GROUP BY title
+G) select title,[type] from Titles group by title,[type] having count(title)>2
